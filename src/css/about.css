@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+:root {
+    --primaryColor: #C7AC79;
+    --darkColor: #000000;
+    --lightColor: #ffffff;
+    --grayColor: #808080;
+    --lightGrayColor: #D3D3D3;
+    --darkGrayColor: #808080;
+    --lightBlackColor: #282828;
+}
+
+html, body{
+    width: 100%;
+    height: 100%;
+    font-family: "Poppins", sans-serif;
+    overflow-x: hidden;
+    scrollbar-width: none;     /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+    overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+  
+#smooth-content {
+  will-change: transform;
+}
+
+/* #loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primaryColor);
+  z-index: 10000;
+}  */
+
+
+/* #loader {
+  position: fixed;
+  top: 73%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2400px;
+  height: 2400px;
+  border-radius: 50%;
+  background-color: var(--primaryColor);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+} 
+
+.loader-text {
+  color: #fff;
+  font-size: 2rem;
+  opacity: 0;
+} */
+
+
+/* header */
+header .black::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px var(--darkColor) solid;
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+header .black:hover::before{
+  transform: translate(5px, 5px);
+}
+
+header svg{
+  transition: transform 0.3s ease;
+}
+
+header .black:hover svg{
+  transform: rotate(-50deg);
+}
+
+header .white:hover svg{
+  transform: rotate(-50deg);
+}
+
+header .white::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--darkColor);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+
+header .white:hover::before{
+  transform: translate(5px, 5px);
+}
+
+section{
+  height: 100vh;
+  width: 100vw;
+}
+
+
+/* section 1 */
+.section-1{
+  width: 100vw;
+  height: 100vh;
+}
+
+/* section 1 */
+.section-2{
+  background-color: var(--darkColor);
+  /* background-image: url('/src/assets/images/guide-8.png');
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat; */
+  width: 100vw;
+  height: 100vh;
+}
+
+.item {
+    transform: translateY(10px); /* tilt by default */ 
+    opacity: 0.3; /* default lower opacity */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.item.active {
+    opacity: 1;
+    transform: translateY(0); /* straighten when active */
+}
+
+
+.section-4{
+  width: 100vw;
+  height: 100vh;
+}
+
+.section-4 .year.active { 
+  color: var(--primaryColor);
+  font-weight: 600;
+}
+
+.section-4 .content {
+  position: absolute; inset: 0 auto auto 0;
+  opacity: 0; transform: translateY(40px);
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+.section-4 .content.active { 
+  opacity:1; 
+  transform: translateY(0); 
+  position: relative; 
+}
+
+.section-5{
+  width: 100vw;
+  height: 100vh;
+}
+
+
+/*  Media Query Breakpoints Reference */
+  /* Extra small devices (portrait phones, less than 576px) */
+  @media (max-width: 575.98px) { 
+
+  }
+
+  /* Small devices (landscape phones, 576px and up) */
+  @media (min-width: 576px) and (max-width: 767.98px) { 
+
+  }
+
+  /* Small devices (phones, 768px and up) */
+  @media only screen and (max-width: 767.98px) {
+
+  }
+
+  /* Medium devices (tablets, 768px and up) */
+  @media (min-width: 768px) and (max-width: 991.98px) { 
+
+  }
+
+  /* Large devices (desktops, 992px and up) */
+  @media (min-width: 992px) and (max-width: 1199.98px) {
+
+  }
+
+   /* Extra large devices (large desktops, 1200px and up) */
+  @media (min-width: 1200px) and (max-width: 1399.98px) {
+
+  }
+
+   /* Extra large devices (large desktops, 1400px and up) */
+  @media (min-width: 1400px) and (max-width: 1599.98px) {
+    /* Large screens */
+  }
+
+   /* Extra large devices (large desktops, 1600px and up) */
+  @media (min-width: 1600px) {
+    /* Ultra-wide or 4K monitors */
+  }
