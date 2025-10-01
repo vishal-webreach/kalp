@@ -22,7 +22,7 @@ export default defineConfig({
   ],
 
   // 👇 base path for deployment (change if deploying in a subfolder)
-  base: '/',
+  base: '/kalp/',
 
   // 👇 project root (keep this '.' if index.html is in root)
   root: '.',
